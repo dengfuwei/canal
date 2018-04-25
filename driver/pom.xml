@@ -3,10 +3,9 @@
 	<parent>
 		<groupId>com.alibaba.otter</groupId>
 		<artifactId>canal</artifactId>
-		<version>1.0.25</version>
+		<version>1.0.25.1</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	<groupId>com.alibaba.otter</groupId>
 	<artifactId>canal.parse.driver</artifactId>
 	<packaging>jar</packaging>
 	<name>canal driver module for otter ${project.version}</name>
@@ -14,7 +13,7 @@
 		<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.common</artifactId>
-			<version>${project.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<!-- log -->
 		<dependency>

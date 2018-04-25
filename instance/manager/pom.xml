@@ -3,18 +3,17 @@
 	<parent>
 		<groupId>com.alibaba.otter</groupId>
 		<artifactId>canal</artifactId>
-		<version>1.0.25</version>
+		<version>1.0.25.1</version>
 		<relativePath>../../pom.xml</relativePath>
 	</parent>
-	<groupId>com.alibaba.otter</groupId>
 	<artifactId>canal.instance.manager</artifactId>
 	<packaging>jar</packaging>
-	<name>canal instance manager module for otter ${project.version}</name>
+	<name>canal instance manager module for otter ${project.parent.version}</name>
 	<dependencies>
 		<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.instance.core</artifactId>
-			<version>${project.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 	</dependencies>
 </project>

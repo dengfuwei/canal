@@ -3,10 +3,9 @@
 	<parent>
 		<groupId>com.alibaba.otter</groupId>
 		<artifactId>canal</artifactId>
-		<version>1.0.25</version>
+		<version>1.0.25.1</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	<groupId>com.alibaba.otter</groupId>
 	<artifactId>canal.sink</artifactId>
 	<packaging>jar</packaging>
 	<name>canal sink module for otter ${project.version}</name>
@@ -14,22 +13,22 @@
 		<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.common</artifactId>
-			<version>${project.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.protocol</artifactId>
-			<version>${project.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.filter</artifactId>
-			<version>${project.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.store</artifactId>
-			<version>${project.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<!-- test dependency -->
 		<dependency>

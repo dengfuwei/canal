@@ -3,47 +3,47 @@
 	<parent>
 		<groupId>com.alibaba.otter</groupId>
 		<artifactId>canal</artifactId>
-		<version>1.0.25</version>
+		<version>1.0.25.1</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>canal.parse</artifactId>
 	<packaging>jar</packaging>
-	<name>canal parse module for otter ${project.version}</name>
+	<name>canal parse module for otter ${project.parent.version}</name>
 	<dependencies>
 		<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.common</artifactId>
-			<version>${project.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.protocol</artifactId>
-			<version>${project.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.meta</artifactId>
-			<version>${project.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.sink</artifactId>
-			<version>${project.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.parse.dbsync</artifactId>
-			<version>${project.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.filter</artifactId>
-			<version>${project.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.parse.driver</artifactId>
-			<version>${project.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
