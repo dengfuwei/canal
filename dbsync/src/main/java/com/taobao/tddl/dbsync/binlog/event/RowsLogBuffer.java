@@ -8,6 +8,7 @@ import java.util.BitSet;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import com.taobao.tddl.dbsync.binlog.CustomColumnType;
 import com.taobao.tddl.dbsync.binlog.JsonConversion;
 import com.taobao.tddl.dbsync.binlog.JsonConversion.Json_Value;
 import com.taobao.tddl.dbsync.binlog.LogBuffer;
@@ -224,7 +225,9 @@ public final class RowsLogBuffer {
                 break;
 
             case LogEvent.MYSQL_TYPE_GEOMETRY:
-                javaType = Types.BINARY;
+//                javaType = Types.BINARY;
+                // 自定义位置事件类型 dengfuwei 20180425
+            	javaType = CustomColumnType.POINT;
                 break;
 
             // case LogEvent.MYSQL_TYPE_BINARY:
@@ -1007,13 +1010,16 @@ public final class RowsLogBuffer {
                 /* fill binary */
                 byte[] binary = new byte[len];
                 buffer.fillBytes(binary, 0, len);
-
+                
+                // 支持point类型后去掉此处注释 dengfuwei 20180425
                 /* Warning unsupport cloumn type */
-                logger.warn(String.format("!! Unsupport column type MYSQL_TYPE_GEOMETRY: meta=%d (%04X), len = %d",
-                    meta,
-                    meta,
-                    len));
-                javaType = Types.BINARY;
+//                logger.warn(String.format("!! Unsupport column type MYSQL_TYPE_GEOMETRY: meta=%d (%04X), len = %d",
+//                    meta,
+//                    meta,
+//                    len));
+//                javaType = Types.BINARY;
+                // 自定义地理位置类型的值 dengfuwei 20180426
+                javaType = CustomColumnType.POINT;
                 value = binary;
                 length = len;
                 break;
